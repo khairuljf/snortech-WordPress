@@ -1,0 +1,151 @@
+<?php get_header(); ?>
+
+<section class="index_center card_text">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="m-t-20 bg-white breadcrumb text-center">
+                    <li>
+                        <a href="index.html" class="font13">Home</a>
+                    </li>
+                    <li>
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/right-arrow1.png" alt="arrow" class="blog_right_arrow">
+                    </li>
+                    <li>
+                        <span class="active text-primary font13">Blog</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!--=============== Header Section End ===============-->
+
+
+<!--=============== Body Section Start ===============-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 m-t-26 hr_bottom_align">
+            <h1 class="text-primary">Blog Articles</h1>
+            <hr>
+            <div class="row">
+                <?php  $args = array(
+                   'orderby' => 'id',
+                   'parent' => 0
+                   );
+                 $categories = get_categories( $args );
+                  foreach ( $categories as $categorys ) {
+                    
+                    $category_active_id = $categorys->term_id;
+                ?>
+                <div class="col-md-6 m-t-40">
+                    <div style="display:none">
+                        <?php $category = the_category_ID(); ?>
+                    </div>
+                    <img src="<?php echo z_taxonomy_image_url($categorys->term_id); ?>" class="img-responsive" alt="card loading" style="width:100%; height:175px"/>
+                    
+                    <div class="card_mask text-center text-white bg-info">
+                       
+                        <p><?php echo $categorys->name; ?></p>
+                    </div>
+                    <div class="card_content text-left blog_card">
+                        <ul class="m-t-20 footer_text_height">
+                            <?php 
+                            $catPost = get_posts(['category' => $category_active_id, 'posts_per_page'   => 4 ]); //change this
+                           foreach ($catPost as $post) : setup_postdata($post); ?>
+                                <li>
+                                <a href="<?php the_permalink(); ?>">
+                                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/right-arrow1.png" alt="arrow" class="arrow_right"/><?php the_title(); ?>
+                                </a>
+                            </li>
+                        <?php  endforeach;?>
+                        </ul>
+                        <div class="text-right blog_card_menu">
+                            <a href="<?php echo get_category_link( $category ); ?> ">
+                                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/list.png" alt="list">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+
+            </div>
+        </div>
+
+<?php get_sidebar(); ?>
+      
+
+
+    </div>
+</div>
+<!--=============== Body Section End ===============-->
+<?php get_footer(); ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+APP_NAME=Laravel
+APP_ENV=local
+APP_KEY=base64:v9148sY6/OURa8g6jezjVN+H04wBjN5cu+uWbzVfWx0=
+APP_DEBUG=true
+APP_LOG_LEVEL=debug
+APP_URL=http://localhost
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=greenpag_crm
+DB_USERNAME=greenpag_crm
+DB_PASSWORD=Crm12345
+
+BROADCAST_DRIVER=log
+CACHE_DRIVER=file
+SESSION_DRIVER=file
+QUEUE_DRIVER=sync
+
+REDIS_HOST=127.0.0.1
+REDIS_PASSWORD=null
+REDIS_PORT=6379
+
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=aimsdevelops@gmail.com
+MAIL_PASSWORD=Hossen423331
+MAIL_ENCRYPTION=tls
+
+PUSHER_APP_ID=
+PUSHER_APP_KEY=
+PUSHER_APP_SECRET=
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

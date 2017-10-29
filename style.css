@@ -1,0 +1,71 @@
+/*
+
+Theme Name:snortech
+Author: khairul islam
+Author uri:khairuljf.com
+version:1.0
+
+*/
+
+.mega-menu-block aside {
+    float: left;
+    color: #666666;
+    width: 30%;
+}
+.breadscrubms ul{
+	margin: 0;
+	padding: 0;
+}
+.breadscrubms .breadcum-nav  li{
+	list-style-type: none
+}
+
+ul#menu-breadcum-menu li a {
+    padding: 0 15px 0 0;
+
+
+
+}
+
+ul#menu-small-header-menu{
+	    text-transform: uppercase;
+    font-size: 12px;
+     padding: 0;
+}
+#menu-small-header-menu li{
+	      float: left;
+    list-style-type: none;
+}
+#menu-small-header-menu li a{
+	    padding: 0 9px 0 0;
+}
+
+#wrap-all{
+	position: relative;
+	    
+}
+
+
+.custom-widget .widget ul{
+	width: 50%;
+}
+.widget.widget-links .wrap-1{
+	width: 100%;
+}
+.custom-widget .widget ul{
+	list-style-image: url('img/right-arrow.png');
+}
+.custom-widget h2:last-child{
+	display: none;
+}
+
+.custom-widget .widget ul {
+    width: 50%;
+    padding: 0 10px 0 0;
+}
+.widget .widget-content .sm-profiles p{
+	float: left ;
+}
+div#wpcf7-f167-o1 p{
+	margin: 0;
+}

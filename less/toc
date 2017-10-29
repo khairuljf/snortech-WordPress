@@ -1,0 +1,480 @@
+/*------------------------------------------------------------------
+[ Table of contents ]
+
+
+
+1. Reset Styles
+
+2. LESS Vars
+
+3. Aux Classes
+
+4. Scroll to the top
+
+5. Applying Settings
+
+6. Form Elements
+
+7. Site Header / .site-header
+
+	7.1. Menu Bar / .menu-bar
+
+	7.2. Header Shadow / .header-shadow
+
+	7.3. Breadscrubms / .breadscrubms
+
+	7.4. Header Search / .header-search
+
+	7.5. Social Media Profiles / .sm-profiles
+
+	7.6. Sub menu / .sub-menu
+
+	7.7. Site Logo / .site-logo
+
+	7.8. Header Contacts / .header-contacts
+
+	7.9. Navigation
+
+		7.9.1. Navigation Normal / nav.normal
+
+			7.9.1.1. Mobile Nav Wrapper / .mobile-nav-wrapper
+
+				7.9.1.1.1. Mobile Navigation Icon / i.mobile-nav-icon
+
+				7.9.1.1.2. Mobile Navigation Icon Clicked / i.mobile-nav-icon.clicked
+
+				7.9.1.1.3. UL / ul
+
+				7.9.1.1.4. Mobile Navigation / .mobile-nav
+
+			7.9.1.2. UL / ul
+
+		7.9.2. Navigation Blocked / nav.blocked
+
+			7.9.2.1. Mobile Nav Wrapper / .mobile-nav-wrapper
+
+				7.9.2.1.1. Mobile Nav Icon / .mobile-nav-icon
+
+				7.9.2.1.2. Mobile Nav Icon Clicked / .mobile-nav-icon-clicked
+
+				7.9.2.1.3. Mobile Nav / .mobile-nav
+
+		7.9.3. Navigation Blocked Shop Menu / nav.blocked.shop-menu
+
+			7.9.3.1. Cart Wrapper Icon / .cart-icon-wrapper
+
+8. Mega Menu / .mega-menu-block
+
+	8.1. Aside / aside
+
+9. Layer Slider / .layer-slider
+
+	9.1. Quote / .quote
+
+	9.2. Quote Author / .quote-author
+
+	9.3. Featured Item / .feature-item
+
+	9.4. Biss Bg / .biss-bg
+
+	9.5. Template Bg / .template-bg
+
+	9.6. Need / .need
+
+	9.7. Icon Logo / i.fa.icon-logo
+
+	9.8. Slide Description #4 / .slide-description-4
+
+	9.9. Slide Description #2 / .slide-description-2
+
+	9.10. Side Description / .slide-description
+
+10. Background images
+
+	10.1. Main background images class / .bg-img
+
+11. Transparent background colors
+	
+	11.1. Secondary transparent background color / .transparent-bg-secondary
+
+	11.2. Primary transparent background color / .transparent-bg-primary
+
+	11.3. White transparent background color / .transparent-bg-white
+
+12. Background colors
+
+	12.1. Primary background color / .primary-bg
+
+	12.2. Lighten primary background color / .primary-bg-lighten
+
+	12.3. Secondary background color / .secondary-bg
+
+	12.4. Lighten secondary background color / .secondary-bg-lighten
+
+13. Arrows in the sections
+	
+	13.1. Arrow Down / .arrow-down
+
+		13.1.1. Arrow Element / .arrow-elem
+
+	13.2. Arrow Up / .arrow-up
+
+		13.2.1. Arrow Element / .arrow-elem
+
+	13.3. Arrows with primary background color / .arrow-down.primary-bg, .arrow-up.primary-bg
+
+	13.4. Arrows with secondary background color / .arrow-down.secondary-bg, .arrow-up.secondary-bg
+
+14. Action block #1 / .action-block-1
+
+15. Action block #2 / .action-block-2
+
+16. Services #1 / .services-1
+
+	16.1. Inner / .inner
+
+	16.2. Color background / .color-bg
+
+	16.3. Icon / span.icon
+
+17. Services #2 / .service-2
+
+18. Services #3 / .service-3
+
+19. Services #4 / .service-4
+
+20. Stats / .stats-item
+
+21. Widgets / .widget
+
+	21.1. Widget title / .widget-title
+
+	21.2. Widget content / .widget-content
+
+	21.3. Widget Twitter / .widget.widget-twitter
+
+	21.4. Widget Links / .widget.widget-links
+
+	21.5. Widget Contacts / .widget.widget-contacts
+
+	21.6. Widget Flickr / .widget.widget-flickr
+
+	21.7. Widget Categories / .widget.widget-categories
+
+	21.7. Widget Search / .widget.widget-search
+
+22. Site Footer / footer.site-footer
+
+	22.1. Footer Menu / .footer-menu
+
+	22.2. Footer Social Buttons / .footer-sb
+
+	22.3. Footer Text #2 / .footer-text-2
+
+	22.4. Footer Contacts / ul.footer-contacts
+
+	22.5. Bottom Bar / .bottom-bar
+
+	22.6. Copyrights / .copyrights
+
+	22.7. Widget / .widget
+
+		22.7.1. Widget Contacts / .widget.widget-contacts
+
+		22.7.2. Widget links / .widget.widget-links
+
+		22.7.3. Widget flickr / .widget.widget-flickr
+
+23. Logo Group / .logo-group
+
+24. Testimonials #1 / .testimonials-1-item
+
+	24.1. Content / .content
+
+	24.2. Author / .author
+
+25. Testimonials #1 / .testimonials-2-item
+
+	25.1. Figure / figure
+
+	25.2. Content / .content
+
+	25.3. Name / p.name
+
+	25.4. Position / p.position
+
+26. Testimonials #3 / .testimonials-3-item
+
+	26.1. Content / .content
+
+	26.2. Author / .author
+
+27. Comapny Events
+
+	27.1. Label / span.label
+
+	27.2. Navigation / .nav
+
+	27.3. Item / .item
+
+28. Riva Styles
+
+	28.1. Carousel Navigation / div.rivaCarouselNav
+
+	28.2. Carousel Bullets Navigation / div.rivaCarouselNavBullets
+
+	28.3. Carousel Wrapper / .rivaCarouselWrapper
+
+	28.4. Vertical Carousel Wrapper / .rivaCarouselWrapperVertical
+
+	28.5. Carousel Item / .rivaCarouselItem
+
+	28.6. Navigation Style #1 / .nav-st-1
+
+	28.7. Navigation Style #4 / .nav-st-4
+
+	28.8. Navigation Style #2 / .nav-st-2
+
+	28.9. Navigation Style #3 / .nav-st-3
+
+29. Post / .post
+
+	29.1. Figure / figure
+
+	29.2. Meta / .meta
+
+	29.3. Content / .content
+
+	29.4. Read More Link / .readmore
+
+	29.5. Single Post / .post-single
+
+	29.6. Horizontal Post / .post-hor
+
+	29.7. Masonry Style / .post-masonry
+
+	29.8. Timeline Style / .post-timeline
+
+30. Twitter widget #1 / .twitter-widget-1
+
+31. Project Item / .project-item
+
+	31.1. Figure / figure
+
+		31.1.1. Image / img
+
+		31.1.2. Figure Caption / figcaption
+
+	31.2. Project columns / .projects-3-cols
+
+32. Riva Sorting Styles / .riva-sorting
+
+	32.1. Dropdown filter selection / .filter-form
+
+	32.2. Filters selection style #2 / .filters.st2
+
+	32.3. Filter / filters
+
+	32.4. Lilsting of sortable items / .listing
+
+33. Partners Logo
+
+34. Homepage #3 COntent Blocks
+
+35. Title Bar
+
+	35.1. H1
+
+	35.2. p
+
+36. Accordion / .biss-accordion
+
+37. Tabs / .biss-tabs
+
+	37.1. Header / header
+
+	37.2. Item / .item
+
+		37.2.1. Content / .content
+
+38. Tabs #2 / .biss-tabs-2
+
+	38.1. Header / header
+
+	38.2. Item / .item
+
+39. Dividers
+
+	39.1. #1 / .divider-1
+
+	39.2. #2 / .divider-2
+
+40. Skills / .biss-skill
+
+	40.1. Name / .name
+
+	20.2. Value background / .val-bg
+
+41. Related Comments / .related-comment
+
+	41.1. Content / .content
+
+	42.2. Meta / p.meta
+
+42. Related Posts / .related-post
+
+	42.1. Figure / figure
+
+	42.2. Title / p.title
+
+	42.3. Meta / p.meta
+
+43. Video backgrounds / .video-bg, .video-content-1
+
+44. Homepage #7 Intro / .homepage-10-intro
+
+45. Buttons
+	
+	45.1. General button settings / .biss-btn
+
+	45.2. Secondary border button / .biss-btn-border-secondary
+
+	45.3. Primary border button / .biss-btn-border-primary
+
+	45.4. White border button / .biss-btn-border-white
+
+	45.5. General border button settings / .biss-btn-border
+
+	45.6. Primary button / .biss-btn-primary
+
+	45.7. Secondary button / .biss-btn-secondary
+
+	45.8. White button / biss-btn-white
+
+46. Team / .team-member
+
+	46.1. Figure / figure
+
+	46.2. Title / p.title
+
+	46.3. / Position / p.position
+
+47. Brochure / a.download-brochure
+
+48. Sidebar navigation / ul.side-nav
+
+49. Pagination / .pagination
+
+50. Single project monitor mockup / .monitor-mockup
+
+51. Product item / .product-item
+
+	51.1. Figure / figure
+
+		51.1.1. Caption / figcaption
+
+			51.1.1.1. Title / a.title
+
+			51.1.1.2. Zoom / a.zoom
+
+		51.1.2. Images / img
+
+	51.2. Details / .product-details
+
+		51.2.1. Title / p.title
+
+		51.2.2. Price / p.price
+
+52. Shopping cart
+
+	52.1. In the cart / .cart-in-cart
+
+	52.2. Product table / .cart-product-table
+
+	52.3. Totals / ul.cart-totals
+
+53. Form elements / .form-elem
+
+	53.1. Label
+
+	53.2. Standard label / label.standard
+
+	53.3. Input
+
+	53.4. Select
+
+	53.5. Textarea
+
+	53.6 Checkbox / input[type=checkbox]
+
+	53.7 Radio / input[type=radio]
+
+54. Checkout
+
+	54.1. Tabs / .shop-checkout-tab
+
+	54.2. Product table / .checkout-product-table
+
+	54.3. Payment type / .payment-type-item
+
+55. 404 / .section-404
+
+56. Single Product Preview Images / .rivaSingleProductPreview
+
+	56.1. Slides / .rivaSingleProductPreviewSlides
+
+		56.1.1. Resize and share controls / .rivaSingleProductPreviewSlideControls
+
+	56.2. Thumbs / .rivaSingleProductPreviewThumbs
+
+	56.3. Horizontal / .rivaSingleProductPreview.horizontal
+
+	56.4. Vertical / .rivaSingleProductPreview.vertical
+
+57. Single Product / .single-product
+
+	57.1. Price / .price
+
+	57.2. Rating / .rating
+
+	57.3. Size / .size
+
+58. Post Author / .post-author
+
+	58.1. Figure / figure
+
+	58.2. Description / .desc
+
+		58.2.1. Title / p.title
+
+		58.2.2. Position / p.position
+
+59. Post Share / .post-share
+
+60. Comments / .comments-list
+
+	60.1. Item / .comment-item
+
+		60.1.1. Wrapper / .wrapper
+
+		60.1.2. Figure / figure
+
+		60.1.3. Inner / .inner
+
+			60.1.3.1. Name / p.name
+
+			60.1.3.2. Date / p.date
+
+			60.1.3.3. Reply / p.reply
+
+			60.1.3.4. Rating / p.rating
+
+61. Comment form / .comment-form
+
+62. Call us
+
+63. Contacts map
+
+64. Flickr #1 Widget
+
+-------------------------------------------------------------------*/
