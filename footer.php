@@ -82,9 +82,24 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/layerslider/layerslider.kreaturamedia.jquery.js" type="text/javascript"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/biss.js"></script>
 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnT6ewhJpccffkJRlbAPyCQeQKJxJfLQ8&libraries=places">
+	
+</script>
+<script>
+var map;
+function initialize() {
+  var mapOptions = {
+    zoom: 10,
+    center: new google.maps.LatLng(-37.813611, 144.963056),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+}
 
+google.maps.event.addDomListener(window, 'load', initialize);
 
-
+</script>
 
 
 
@@ -330,42 +345,7 @@
 })(jQuery);
 </script>
 
-<script>
-(function($) {
-	"use strict";
 
-
-	$('document').ready(function() {
-
-		var $container = $('body'),
-			tweetsTimer;
-
-		$container.imagesLoaded( function() {
-
-			$('#project-sorting').rivaSorting({
-				selector	: 'project-item',
-				gutter		: 15,
-				inRow		: 2
-			});
-
-			tweetsTimer = setTimeout(function() {
-				$('#tweets-list').each(function() {
-					$(this).find('ul > li').addClass('tweet-item');
-					$('<i class="fa fa-twitter"></i>').prependTo($(this).find('.tweet-item'));
-					$('.tweet-item').find('p.interact').remove().detach();
-					$(this).show();
-				})
-			}, 3000);
-
-		});
-
-		clearTimeout(tweetsTimer);
-
-	});
-
-})(jQuery);
-
-</script>
 
 
 <?php wp_footer(); ?>

@@ -28,7 +28,7 @@
 
 									<p class="margin-top-0"><?php echo get_theme_mod('mcontent') ?></p>
 
-									<iframe src="<?php echo get_theme_mod('mlink') ?>" width="370" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+									<div class="contacts-map" id="map-canvas"></div>
 
 								</div>
 

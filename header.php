@@ -16,9 +16,9 @@
 <link rel="shortcut icon" href="favicon.ico">
 
 <!-- CSS includes //-->
-<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Archivo+Black' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Archivo+Black' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri()) ?>/css/normalize.css" type="text/css">
 <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/colorbox-skins/4/colorbox.css" type="text/css">
 <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/animate.css" type="text/css">
